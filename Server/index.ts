@@ -24,7 +24,7 @@ import * as koaViews from 'koa-views';
 import * as path from 'path';
 //tslint-disable
 const app = new koa();
-app.use(koaStatic(path.resolve(__dirname , './static')));
+app.use(koaStatic(path.resolve(__dirname , './')));
 app.use(koaViews(path.resolve(__dirname , './') , {
   map: {
     html: 'underscore',
