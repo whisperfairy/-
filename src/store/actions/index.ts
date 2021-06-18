@@ -4,7 +4,7 @@ import {
 	WEATHER_GET,
 	WEATHER_SET,
 	MAP_READY,
-	WEATHER_ERROR,
+	WEATHER_ERROR, FUGONG_COUNT,
 } from "../constants";
 
 export const weatherGetAction = createAction(
@@ -23,3 +23,7 @@ export const weatherErrorAction = createAction(
 )();
 
 export const mapReadyAction = createAction(MAP_READY)();
+//复工count action
+export const countAction =createAction(FUGONG_COUNT,(count,percent)=> {
+ return {count,percent}
+})();

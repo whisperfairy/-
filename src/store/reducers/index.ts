@@ -10,11 +10,14 @@
 
 import {combineReducers} from 'redux';
 import {weatherReducer, WeatherState} from "./WeatherReducer";
+import {counterReducer, CountState} from "./countReducer";
 
 export type RootState = {
 	weather: WeatherState
+	counter: CountState
 }
 const reducers = combineReducers({
 	weather: weatherReducer,
+	counter: counterReducer,
 });
 export default reducers;
