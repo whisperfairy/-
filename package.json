@@ -10,15 +10,21 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0",
+    "koa-view": "^2.1.4",
+    "koa-views": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
+    "understore": "^2.1.6",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "prebuild": "rimraf build",
+    "build": "react-scripts build &&  cross-env tsc --project ./Server/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
